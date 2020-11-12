@@ -10,7 +10,6 @@ import { H3 } from '../../components/H3';
 
 
 export const HomePage = () => {
-  console.log(process.env.REACT_APP_API_URL)
   const { get, loading, error, data } = useFetch(process.env.REACT_APP_API_URL)
   const receiveData = !!data && data.length; 
   return (
