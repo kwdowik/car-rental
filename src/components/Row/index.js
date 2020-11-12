@@ -5,7 +5,7 @@ import classnames from 'classnames'
 export const Row = ({ type, item }) => {
   return  (
     <span className={classnames(styles.primary, styles[type])}>
-      [{item.id}] - {item.name}
+      [{item.id}] - {item.model}
     </span>
   )
 }

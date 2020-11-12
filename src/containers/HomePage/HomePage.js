@@ -1,3 +1,5 @@
+import useFetch from 'use-http'
+
 import './HomePage.css';
 import { Button } from '../../components/Button';
 import { H1 } from '../../components/H1';
@@ -5,41 +7,24 @@ import { List } from '../../components/List';
 import { Row } from '../../components/Row';
 import { H3 } from '../../components/H3';
 
-const data = [
-  {
-    id: '1',
-    name: 'test name 01'
-  },
-  {
-    id: '2',
-    name: 'test name 02'
-  },
-  {
-    id: '3',
-    name: 'test name 03'
-  },
-  {
-    id: '4',
-    name: 'test name 04'
-  }
-]
-const error = '';
-const loading = false;
+
 
 export const HomePage = () => {
-  // const { loading, error, data = [] } = useFetch()
+  console.log(process.env.REACT_APP_API_URL)
+  const { get, loading, error, data } = useFetch(process.env.REACT_APP_API_URL)
+  const receiveData = !!data && data.length; 
   return (
     <div className="home-container">
       <H1>Car rental</H1>
-      {error && <H3 type="error">{error}</H3>}
+      {error && <H3 type="error">{error.message}</H3>}
       {loading && <H3>loading...</H3>}
-      {!error && <List items={data}
+      {receiveData && <List items={data}
         renderRow={(item) => <Row key={item.id} item={item} />}
       />}
       <div>
-        <Button disabled={error}>Get ✅</Button>
-        <Button disabled={error} type='error'>Get ❎</Button>
-        <Button disabled={!error}>Retry 🔄</Button>
+        <Button disabled={error} onClick={() => get('/cars')}>Get ✅</Button>
+        <Button disabled={error} onClick={() => get('/invalid')} type='error'>Get ❎</Button>
+        <Button disabled={!error} onClick={() => get('/cars')}>Retry 🔄</Button>
       </div>
     </div>
   );
