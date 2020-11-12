@@ -1,0 +1,30 @@
+.primary {
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: white;
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  font-weight: 600;
+  outline: none;
+}
+.primary:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1em grey;
+}
+.primary:active {
+  cursor: pointer;
+  box-shadow: 0 0 1em #cececc;
+}
+.primary:disabled {
+  cursor: not-allowed;
+  box-shadow: none
+}
+
+.error {
+  border: 2px solid red;
+  cursor: not-allowed;
+}
+.error:hover {
+  border: 2px solid red;
+}
