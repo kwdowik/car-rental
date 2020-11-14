@@ -1,17 +1,12 @@
 {
-  "cars": [
-    { "id": 1, "model": "BMW 120", "price": 60, "available": false, "category": ["normal"] },
-    { "id": 2, "model": "Honda Civic", "price": 40, "available": true, "category": ["budget"] },
-    { "id": 3, "model": "Audi 4", "price": 75, "available": true, "category": ["normal"] },
-    { "id": 4, "model": "Audi e-tron", "price": 120, "available": true, "category": ["premium", "eletric"] },
-    { "id": 5, "model": "Volvo S60", "price": 90, "available": false, "category": ["normal", "hybrid"] },
-    { "id": 6, "model": "BMW X5", "price": 130, "available": true, "category": ["premium"] },
-    { "id": 7, "model": "Mercedes A", "price": 65, "available": true, "category": ["normal"] },
-    { "id": 8, "model": "Porsche Panamera", "price": 180, "available": true, "category": ["premium"] },
-    { "id": 13, "model": "Porsche 911", "price": 200, "available": true, "category": ["premium"] },
-    { "id": 9, "model": "Renault Clio", "price": 30, "available": true, "category": ["budget"] },
-    { "id": 10, "model": "Fiat 500", "price": 35, "available": false, "category": ["budget"] },
-    { "id": 11, "model": "Tesla X", "price": 115, "available": true, "category": ["premium", "eletric"] },
-    { "id": 12, "model": "Toyota Auris", "price": 45, "available": false, "category": ["budget", "hybrid"] }
-  ]
+  "cars": {
+    "cars": [
+      { "id": 1, "model": "BMW 120", "price": 60, "available": false, "category": ["normal"] },
+      { "id": 2, "model": "Honda Civic", "price": 40, "available": true, "category": ["budget"] },
+      { "id": 3, "model": "Audi 4", "price": 75, "available": true, "category": ["normal"] },
+      { "id": 4, "model": "Audi e-tron", "price": 120, "available": true, "category": ["premium", "eletric"] },
+      { "id": 5, "model": "Volvo S60", "price": 90, "available": false, "category": ["normal", "hybrid"] },
+      { "id": 6, "model": "BMW X5", "price": 130, "available": true, "category": ["premium"] }
+    ]
+  }
 }
