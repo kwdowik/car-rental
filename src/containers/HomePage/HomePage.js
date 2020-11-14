@@ -7,17 +7,15 @@ import { List } from '../../components/List';
 import { Row } from '../../components/Row';
 import { H3 } from '../../components/H3';
 
-
-
 export const HomePage = () => {
-  const { get, loading, error, data } = useFetch(process.env.REACT_APP_API_URL)
-  const receiveData = !!data && data.length; 
+  const { get, loading, error, data = {} } = useFetch(process.env.REACT_APP_API_URL)
+  const receiveData = !!data.cars && data.cars.length; 
   return (
     <div className="home-container">
       <H1>Car rental</H1>
       {error && <H3 type="error">{error.message}</H3>}
       {loading && <H3>loading...</H3>}
-      {receiveData && <List items={data}
+      {!error && receiveData && <List items={data.cars}
         renderRow={(item) => <Row key={item.id} item={item} />}
       />}
       <div>

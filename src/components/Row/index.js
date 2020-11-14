@@ -5,7 +5,7 @@ import classnames from 'classnames'
 export const Row = ({ type, item }) => {
   return  (
     <span role="listitem" className={classnames(styles.primary, styles[type])}>
-      [{item.id}] - {item.model}
+      {item.model} - {item.price}$/day
     </span>
   )
 }
